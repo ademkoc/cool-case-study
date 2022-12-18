@@ -2,8 +2,10 @@ import {join} from "desm";
 import fastify from "fastify";
 import autoload from "@fastify/autoload";
 
-export async function createServer(opts = {}) {
+export async function createServer(opts) {
     const server = fastify(opts);
+
+    server.decorate("env", opts.env);
 
     await server.register(autoload, {
         dir: join(import.meta.url, "plugins"),
@@ -17,12 +19,13 @@ export async function createServer(opts = {}) {
     return server;
 }
 
-export async function startServer(opts = {}) {
+export async function startServer(opts) {
     const server = await createServer({
         logger: {
             level: "info"
         },
-        disableRequestLogging: opts.env.ENABLE_REQUEST_LOGGING !== "true"
+        disableRequestLogging: opts.env.ENABLE_REQUEST_LOGGING !== "true",
+        env: opts.env
     });
 
     try {
