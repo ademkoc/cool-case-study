@@ -15,6 +15,7 @@ const schemaCalculateCompability = {
 
 const schemaBestMatches = {
     query: {
+        type: "object",
         required: ["lang"],
         properties: {
             lang: {type: "string"}
