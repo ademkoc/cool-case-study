@@ -1,5 +1,5 @@
 {
-  "name": "api-template",
+  "name": "github-pl-comparator",
   "version": "1.0.0",
   "description": "",
   "type": "module",
@@ -11,7 +11,9 @@
     "format": "prettier --config .prettierrc \"{src,test}/**/*.js\" --write",
     "lint": "eslint --fix \"{src,test}/**/*.js\"",
     "prepare": "husky install",
-    "test": "vitest ./test"
+    "test": "vitest ./test",
+    "docker:build": "docker build . -t ademkoc/github-pl-comparator",
+    "docker:run": "docker run -p 8080:8080 -d ademkoc/github-pl-comparator"
   },
   "keywords": [],
   "author": "",
