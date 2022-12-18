@@ -4,6 +4,7 @@
   "description": "",
   "type": "module",
   "main": "src/index.js",
+  "private": true,
   "scripts": {
     "start": "node src/index.js",
     "dev": "nodemon src/index.js",
@@ -19,9 +20,12 @@
     "@fastify/mongodb": "6.2.0",
     "@fastify/swagger": "8.2.1",
     "@fastify/swagger-ui": "1.3.0",
+    "bignumber.js": "^9.1.1",
     "desm": "1.3.0",
     "dotenv": "16.0.3",
-    "fastify": "4.10.2"
+    "fastify": "4.10.2",
+    "got": "12.5.3",
+    "lodash": "4.17.21"
   },
   "devDependencies": {
     "eslint": "8.29.0",
