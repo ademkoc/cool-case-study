@@ -5,9 +5,9 @@ export const autoConfig = {
     mode: "dynamic",
     openapi: {
         info: {
-            title: "String",
-            description: "String",
-            version: "String"
+            title: "Github User-Organization Comparator API",
+            description: "",
+            version: "1.0.0"
         }
     }
 };
