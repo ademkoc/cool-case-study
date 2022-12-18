@@ -13,7 +13,8 @@ export async function createServer(opts) {
     });
 
     await server.register(autoload, {
-        dir: join(import.meta.url, "routes")
+        dir: join(import.meta.url, "routes"),
+        dirNameRoutePrefix: false
     });
 
     return server;
